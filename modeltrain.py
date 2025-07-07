@@ -207,7 +207,7 @@ if train_model:
 
         df["weight"] = pd.to_numeric(df["weight"], errors="coerce").fillna(0)
 
-        X = df[["quartz_type", "company_code", "material_code", "weight", "days_since_start", "diameter", "length"]]
+        X = df[["quartz_type", "company_code", "material_code", "thickness", "days_since_start", "diameter", "length"]]
         y = np.log1p(df["原币单价"])
         weights = np.linspace(1, 2, len(X))
         X_train, X_test, y_train, y_test, w_train, w_test = train_test_split(X, y, weights, test_size=0.2, random_state=42)
