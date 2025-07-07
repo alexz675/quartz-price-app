@@ -69,7 +69,8 @@ This repo follows strong sanitization practices:
      ```
    - Windows:
      ```bash
-     cd ~\Desktop\YourFolder
+     cd C:\Users\YourUsername\Desktop\YourFolder
+    ```
 
 2. Run either app:
     - Model Trainer:
