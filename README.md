@@ -53,6 +53,23 @@ This repo follows strong sanitization practices:
     ```bash
     pip install -r requirements.txt
     ```
+2. Install all the necessary files (listed below) and place them into a folder together on Desktop
+    - cleaned_mapping_file.xlsx
+    - fake_parsed_data.xlsx
+    - fake_parsed_data_backup.xlsx
+    - modelfinal.pkl
+    - model_training_log.csv
+    - modeltrain.py
+    - predictor.py
+      
+3. Navigate to the folder (open up terminal)
+   - Mac:
+     ```bash
+     cd ~/Desktop/YourFolder
+     ```
+   - Windows:
+     ```bash
+     cd ~\Desktop\YourFolder
 
 2. Run either app:
     - Model Trainer:
@@ -63,6 +80,7 @@ This repo follows strong sanitization practices:
       ```bash
       streamlit run predictor.py
       ```
+
 
 ---
 
