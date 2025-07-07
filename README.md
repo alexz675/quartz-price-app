@@ -42,7 +42,7 @@ This repo follows strong sanitization practices:
 
 ## Disclaimer
 
-> This project is for demonstration and educational purposes only.  
+> This modified version of the project is for demonstration and educational purposes only.  
 > **Do not use this repository for actual commercial operations or pricing predictions.**
 
 ---
