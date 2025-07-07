@@ -115,7 +115,7 @@ material_input = st.selectbox("🧪 Material Name", options=list(material_map.ke
 
 length = st.number_input("📏 Length (mm)", min_value=0.0, step=1.0)
 diameter = st.number_input("🔘 Diameter (mm)", min_value=0.0, step=1.0)
-thickness = st.number_input(" Thickness (mm)", min_value=0.0, step=0.1, format="%.2f")
+thickness = st.number_input("▬▬ Thickness (mm)", min_value=0.0, step=0.1, format="%.2f")
 input_date = st.date_input("📅 Order Date", value=date.today(), format="YYYY-MM-DD")
 days_since_start = (input_date - start_date).days
 
