@@ -68,24 +68,18 @@ def prepare_input(
     quartz_type=None,
     company_code=None,
     material_code=None,
-    weight=None,
+    thickness=None,
     days_since_start=None,
     diameter=None,
     length=None,
     feature_order=None
 ):
-    try:
-        weight = float(weight)
-        if weight == 0.0:
-            weight = 5.0
-    except:
-        weight = 5.0
 
     input_dict = {
         "quartz_type": int(quartz_type) if quartz_type is not None else 1,
         "company_code": int(company_code) if company_code is not None else 0,
         "material_code": int(material_code) if material_code is not None else 0,
-        "weight": weight,
+        "thickness": float(thickness) if thickness is not None else 0.0,
         "days_since_start": int(days_since_start) if days_since_start is not None else 0,
         "diameter": float(diameter) if diameter is not None else 0.0,
         "length": float(length) if length is not None else 0.0,
@@ -121,7 +115,7 @@ material_input = st.selectbox("🧪 Material Name", options=list(material_map.ke
 
 length = st.number_input("📏 Length (mm)", min_value=0.0, step=1.0)
 diameter = st.number_input("🔘 Diameter (mm)", min_value=0.0, step=1.0)
-weight = st.number_input("⚖️ Weight (kg)", min_value=0.0, step=0.1, format="%.2f")
+thickness = st.number_input(" Thickness (mm)", min_value=0.0, step=0.1, format="%.2f")
 input_date = st.date_input("📅 Order Date", value=date.today(), format="YYYY-MM-DD")
 days_since_start = (input_date - start_date).days
 
@@ -146,7 +140,7 @@ if st.button("💲 Predict Unit Price"):
             quartz_type=quartz_code,
             company_code=company_code,
             material_code=material_code,
-            weight=weight,
+            thickness=thickness,
             days_since_start=days_since_start,
             diameter=diameter,
             length=length,
