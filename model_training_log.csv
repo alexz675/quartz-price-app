@@ -1,2 +1,2 @@
 model_file,trained_at,rmse,r2
-mainland_model_final.pkl,2025-07-03 10:00,35.87,0.8806
+model_final.pkl,2025-07-03 10:00,35.87,0.8806
